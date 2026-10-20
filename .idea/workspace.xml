@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4b2a43d0-cf89-4b4c-8d26-53dd9d58f44c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.6330466370423062" />
+      <entry key="MS500" value="4.600130643363985" />
+      <entry key="S2" value="9.924536333740651" />
+      <entry key="S5" value="13.592884933899148" />
+      <entry key="S10" value="17.273107404831272" />
+      <entry key="S30" value="28.6212822334304" />
+      <entry key="S60" value="39.60654572752845" />
+      <entry key="M2" value="50.46144764859982" />
+      <entry key="M5" value="60.53509496923488" />
+      <entry key="M10" value="65.06416007697938" />
+      <entry key="M15" value="66.82957829715808" />
+      <entry key="M30" value="68.7868343687851" />
+      <entry key="H1" value="69.85646819326949" />
+      <entry key="H2" value="70.45057041947861" />
+      <entry key="H4" value="71.99031844225911" />
+      <entry key="D1" value="98.56011687010508" />
+      <entry key="W1" value="117.7123071464517" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="3.563374756877503E-192" />
+      <entry key="M5" value="2.6347814650686584E-77" />
+      <entry key="M10" value="5.133012239483417E-39" />
+      <entry key="M15" value="2.9756478461333333E-26" />
+      <entry key="M30" value="1.725006622054921E-13" />
+      <entry key="H1" value="4.153319903468697E-7" />
+      <entry key="H2" value="6.444625593057127E-4" />
+      <entry key="H4" value="0.02538626714004464" />
+      <entry key="D1" value="0.5421254649639029" />
+      <entry key="W1" value="0.9162505708646549" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.5526181150281528" />
+      <entry key="MS500" value="4.561148128429899" />
+      <entry key="S2" value="9.905924644075862" />
+      <entry key="S5" value="13.5816091082975" />
+      <entry key="S10" value="17.260642371757104" />
+      <entry key="S30" value="28.609008157496078" />
+      <entry key="S60" value="39.59760595114092" />
+      <entry key="M2" value="50.45584973450512" />
+      <entry key="M5" value="60.53243870130969" />
+      <entry key="M10" value="65.06270436518925" />
+      <entry key="M15" value="66.8285658366161" />
+      <entry key="M30" value="68.78630117032074" />
+      <entry key="H1" value="69.85619375607385" />
+      <entry key="H2" value="70.451073951985" />
+      <entry key="H4" value="72.01561034884153" />
+      <entry key="D1" value="99.10214522369817" />
+      <entry key="W1" value="118.62853542478207" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Kq2wWo0KiYDigUqCjqu0XzMlOp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CidrDebugProfileConversion": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.python manage.py test.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/melman/cocktail_api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Django Server.cocktail_api">
+    <configuration name="python manage.py test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cocktail_api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="RUN_AS_SCRIPT" value="" />
+      <option name="SCRIPT_NAME" value="manage.py" />
+      <option name="PARAMETERS" value="test" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cocktail_api" type="Python.DjangoServer" factoryName="Django server">
+      <module name="cocktail_api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="RUN_AS_SCRIPT" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.python manage.py test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-a50aca56a434-JavaScript-PY-263.6259.38" />
+        <option value="bundled-python-sdk-9877215566ef-5ef8a7947164-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-263.6259.38" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b2a43d0-cf89-4b4c-8d26-53dd9d58f44c" name="Changes" comment="" />
+      <created>1792271017072</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792271017072</updated>
+      <workItem from="1792271018132" duration="2474000" />
+      <workItem from="1792350290228" duration="1971000" />
+      <workItem from="1792352284598" duration="1534000" />
+      <workItem from="1792412734096" duration="109000" />
+      <workItem from="1792524513385" duration="252000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cocktail_api$python_manage_py_test.coverage" NAME="python manage.py test Coverage Results" MODIFIED="1792350390869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
