@@ -22,8 +22,8 @@ class BaseTest(APITestCase):
             "category": "Long drink",
             "instructions": "Wymieszaj.",
             "ingredients": [
-                {"ingredient": self.rum.pk, "quantity": "50", "unit": "ml"},
-                {"ingredient": self.mint.pk, "quantity": "8", "unit": "leaf"},
+                {"ingredient": self.rum.pk, "measure": "50 ml"},
+                {"ingredient": self.mint.pk, "measure": "8 leaf"},
             ],
         }
         data.update(over)
@@ -37,7 +37,6 @@ class AuthTests(BaseTest):
         self.assertNotIn("password", r.data)
         r = self.client.post(reverse("login"), {"username": "new", "password": "Silnehaslo123"})
         self.assertEqual(r.status_code, 200)
-        # sesja działa: można dodać składnik bez żadnych tokenów
         self.assertEqual(self.client.post(reverse("ingredient-list"), {"name": "Gin"}).status_code, 201)
         self.client.post(reverse("logout"))
         self.assertEqual(self.client.post(reverse("ingredient-list"), {"name": "Tonic"}).status_code, 401)
@@ -55,7 +54,6 @@ class AuthTests(BaseTest):
     def test_register_weak_password_rejected(self):
         r = self.client.post(reverse("register"), {"username": "x", "email": "x@x.pl", "password": "12345678"})
         self.assertEqual(r.status_code, 400)
-
 
 class IngredientTests(BaseTest):
     def test_list_public_and_paginated(self):
@@ -122,13 +120,13 @@ class CocktailTests(BaseTest):
     def test_validation(self):
         bad = [
             self.payload(ingredients=[]),
-            self.payload(ingredients=[{"ingredient": self.rum.pk, "quantity": "0", "unit": "ml"}]),
-            self.payload(ingredients=[{"ingredient": self.rum.pk, "quantity": "-5", "unit": "ml"}]),
-            self.payload(ingredients=[{"ingredient": 9999, "quantity": "5", "unit": "ml"}]),
-            self.payload(ingredients=[{"ingredient": self.rum.pk, "quantity": "5", "unit": "kg"}]),
+            self.payload(ingredients=[{"ingredient": 9999, "measure": "5 ml"}]),
+            self.payload(ingredients=[{"ingredient": self.rum.pk, "measure": "x" * 101}]),
+            self.payload(tags="IBA"),
+            self.payload(tags=["ok", ""]),
             self.payload(ingredients=[
-                {"ingredient": self.rum.pk, "quantity": "5", "unit": "ml"},
-                {"ingredient": self.rum.pk, "quantity": "5", "unit": "ml"},
+                {"ingredient": self.rum.pk, "measure": "5 ml"},
+                {"ingredient": self.rum.pk, "measure": "5 ml"},
             ]),
             self.payload(name=""),
             self.payload(category="   "),
@@ -157,7 +155,7 @@ class CocktailTests(BaseTest):
     def test_put_replaces_ingredients(self):
         cid = self.create().data["id"]
         url = reverse("cocktail-detail", args=[cid])
-        data = self.payload(ingredients=[{"ingredient": self.soda.pk, "quantity": "100", "unit": "ml"}])
+        data = self.payload(ingredients=[{"ingredient": self.soda.pk, "measure": "100 ml"}])
         r = self.client.put(url, data, format="json")
         self.assertEqual(r.status_code, 200, r.data)
         self.assertEqual([x["ingredient"]["name"] for x in r.data["recipe"]], ["Soda"])
@@ -173,8 +171,8 @@ class CocktailTests(BaseTest):
         self.create(
             name="Virgin Mojito", category="Bezalkoholowy",
             ingredients=[
-                {"ingredient": self.mint.pk, "quantity": "8", "unit": "leaf"},
-                {"ingredient": self.soda.pk, "quantity": "100", "unit": "ml"},
+                {"ingredient": self.mint.pk, "measure": "8 leaf"},
+                {"ingredient": self.soda.pk, "measure": "100 ml"},
             ],
         )
         url = reverse("cocktail-list")

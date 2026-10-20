@@ -4,38 +4,61 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b2a43d0-cf89-4b4c-8d26-53dd9d58f44c" name="Changes" comment="" />
+    <list default="true" id="4b2a43d0-cf89-4b4c-8d26-53dd9d58f44c" name="Changes" comment="Backend v1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cocktails/management/commands/seed.py" beforeDir="false" afterPath="$PROJECT_DIR$/cocktails/management/commands/seed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cocktails/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/cocktails/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cocktails/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cocktails/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cocktails/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/cocktails/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cocktails/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/cocktails/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="41" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;melamann00&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/melamann00/cocktail_api.git&quot;,
+    &quot;accountId&quot;: &quot;b0f1c80e-120c-48d8-ab66-bde09d666ea4&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.6330466370423062" />
-      <entry key="MS500" value="4.600130643363985" />
-      <entry key="S2" value="9.924536333740651" />
-      <entry key="S5" value="13.592884933899148" />
-      <entry key="S10" value="17.273107404831272" />
-      <entry key="S30" value="28.6212822334304" />
-      <entry key="S60" value="39.60654572752845" />
-      <entry key="M2" value="50.46144764859982" />
-      <entry key="M5" value="60.53509496923488" />
-      <entry key="M10" value="65.06416007697938" />
-      <entry key="M15" value="66.82957829715808" />
-      <entry key="M30" value="68.7868343687851" />
-      <entry key="H1" value="69.85646819326949" />
-      <entry key="H2" value="70.45057041947861" />
-      <entry key="H4" value="71.99031844225911" />
-      <entry key="D1" value="98.56011687010508" />
-      <entry key="W1" value="117.7123071464517" />
+      <entry key="MS100" value="1.2048418875998013" />
+      <entry key="MS500" value="2.8577548073099717" />
+      <entry key="S2" value="6.3751430764722095" />
+      <entry key="S5" value="10.015931275554994" />
+      <entry key="S10" value="15.213924208432983" />
+      <entry key="S30" value="35.81735414855228" />
+      <entry key="S60" value="58.28403887950402" />
+      <entry key="M2" value="82.33011500261868" />
+      <entry key="M5" value="106.42077599477271" />
+      <entry key="M10" value="117.36552352271576" />
+      <entry key="M15" value="121.53355724222767" />
+      <entry key="M30" value="126.04963482459848" />
+      <entry key="H1" value="128.46387078850557" />
+      <entry key="H2" value="129.74779505160717" />
+      <entry key="H4" value="131.632876056024" />
+      <entry key="D1" value="158.48466029254072" />
+      <entry key="W1" value="177.69989741937272" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -45,35 +68,35 @@
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
-      <entry key="M2" value="3.563374756877503E-192" />
-      <entry key="M5" value="2.6347814650686584E-77" />
-      <entry key="M10" value="5.133012239483417E-39" />
-      <entry key="M15" value="2.9756478461333333E-26" />
-      <entry key="M30" value="1.725006622054921E-13" />
-      <entry key="H1" value="4.153319903468697E-7" />
-      <entry key="H2" value="6.444625593057127E-4" />
-      <entry key="H4" value="0.02538626714004464" />
-      <entry key="D1" value="0.5421254649639029" />
-      <entry key="W1" value="0.9162505708646549" />
+      <entry key="M2" value="2.3218410623600677E-192" />
+      <entry key="M5" value="2.2198978726907808E-77" />
+      <entry key="M10" value="4.711579217938273E-39" />
+      <entry key="M15" value="2.810461659558842E-26" />
+      <entry key="M30" value="1.6764431572704298E-13" />
+      <entry key="H1" value="4.0944391035530506E-7" />
+      <entry key="H2" value="6.398780433452174E-4" />
+      <entry key="H4" value="0.025295810786476365" />
+      <entry key="D1" value="0.5418030356656711" />
+      <entry key="W1" value="0.9161727023960273" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5526181150281528" />
-      <entry key="MS500" value="4.561148128429899" />
-      <entry key="S2" value="9.905924644075862" />
-      <entry key="S5" value="13.5816091082975" />
-      <entry key="S10" value="17.260642371757104" />
-      <entry key="S30" value="28.609008157496078" />
-      <entry key="S60" value="39.59760595114092" />
-      <entry key="M2" value="50.45584973450512" />
-      <entry key="M5" value="60.53243870130969" />
-      <entry key="M10" value="65.06270436518925" />
-      <entry key="M15" value="66.8285658366161" />
-      <entry key="M30" value="68.78630117032074" />
-      <entry key="H1" value="69.85619375607385" />
-      <entry key="H2" value="70.451073951985" />
-      <entry key="H4" value="72.01561034884153" />
-      <entry key="D1" value="99.10214522369817" />
-      <entry key="W1" value="118.62853542478207" />
+      <entry key="MS100" value="1.1571283116067934" />
+      <entry key="MS500" value="2.83650757422212" />
+      <entry key="S2" value="6.363421706013034" />
+      <entry key="S5" value="10.008425922414245" />
+      <entry key="S10" value="15.207640499626885" />
+      <entry key="S30" value="35.80863657361257" />
+      <entry key="S60" value="58.27491512357782" />
+      <entry key="M2" value="82.32295585053326" />
+      <entry key="M5" value="106.41686641658934" />
+      <entry key="M10" value="117.36330051360105" />
+      <entry key="M15" value="121.53199790010441" />
+      <entry key="M30" value="126.04880901632706" />
+      <entry key="H1" value="128.46344488541126" />
+      <entry key="H2" value="129.7482169339308" />
+      <entry key="H4" value="131.6580387104683" />
+      <entry key="D1" value="159.0263597389561" />
+      <entry key="W1" value="178.61604689713204" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -96,7 +119,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/melman/cocktail_api",
+    "last_opened_file_path": "/home/melman/cocktail_api (2)",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,7 +128,7 @@
     "python.packages.toolwindow.project.migrated.to.right.top.v2": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Django Server.cocktail_api">
+  <component name="RunManager" selected="Django Server.cocktail_api (2)">
     <configuration name="python manage.py test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cocktail_api" />
       <option name="ENV_FILES" value="" />
@@ -129,6 +152,32 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cocktail_api (2)" type="Python.DjangoServer" factoryName="Django server">
+      <module name="cocktail_api (2)" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="RUN_AS_SCRIPT" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
     <configuration name="cocktail_api" type="Python.DjangoServer" factoryName="Django server">
@@ -182,12 +231,26 @@
       <workItem from="1792350290228" duration="1971000" />
       <workItem from="1792352284598" duration="1534000" />
       <workItem from="1792412734096" duration="109000" />
-      <workItem from="1792524513385" duration="252000" />
+      <workItem from="1792524513385" duration="462000" />
+      <workItem from="1792526409702" duration="367000" />
     </task>
+    <task id="LOCAL-00001" summary="Backend v1.0">
+      <option name="closed" value="true" />
+      <created>1792524815521</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792524815521</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Backend v1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend v1.0" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cocktail_api$python_manage_py_test.coverage" NAME="python manage.py test Coverage Results" MODIFIED="1792350390869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

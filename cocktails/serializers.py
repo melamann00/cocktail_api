@@ -1,4 +1,3 @@
-from decimal import Decimal
 from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
 from django.db import transaction
@@ -38,7 +37,7 @@ class LoginSerializer(serializers.Serializer):
 class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ingredient
-        fields = ["id", "name", "description", "is_alcoholic", "image_url"]
+        fields = ["id", "name", "description", "type", "percentage", "is_alcoholic", "image_url"]
 
     def validate_name(self, value):
         value = value.strip()
@@ -49,26 +48,18 @@ class IngredientSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Składnik o tej nazwie już istnieje.")
         return value
 
-
 class CocktailIngredientReadSerializer(serializers.ModelSerializer):
     ingredient = IngredientSerializer(read_only=True)
 
     class Meta:
         model = CocktailIngredient
-        fields = ["ingredient", "quantity", "unit"]
-
+        fields = ["ingredient", "measure"]
 
 class CocktailIngredientWriteSerializer(serializers.Serializer):
     ingredient = serializers.PrimaryKeyRelatedField(queryset=Ingredient.objects.all())
-    quantity = serializers.DecimalField(max_digits=7, decimal_places=2, min_value=Decimal("0.01"))
-    unit = serializers.ChoiceField(
-        choices=CocktailIngredient.Unit.choices, default=CocktailIngredient.Unit.ML
-    )
-
+    measure = serializers.CharField(max_length=100, allow_blank=True, default="")
 
 class CocktailSerializer(serializers.ModelSerializer):
-    """Odczyt: zagnieżdżone składniki z ilościami. Zapis: lista {ingredient: id, quantity, unit}."""
-
     ingredients = CocktailIngredientWriteSerializer(many=True, write_only=True)
     recipe = CocktailIngredientReadSerializer(
         source="cocktail_ingredients", many=True, read_only=True
@@ -80,7 +71,8 @@ class CocktailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cocktail
         fields = [
-            "id", "name", "category", "instructions", "ingredients", "recipe",
+            "id", "name", "category", "glass", "tags", "instructions", "image_url",
+            "ingredients", "recipe",
             "is_alcoholic", "average_rating", "author", "created_at", "updated_at",
         ]
         read_only_fields = ["created_at", "updated_at"]
@@ -101,6 +93,11 @@ class CocktailSerializer(serializers.ModelSerializer):
         value = value.strip()
         if not value:
             raise serializers.ValidationError("Kategoria nie może być pusta.")
+        return value
+
+    def validate_tags(self, value):
+        if not isinstance(value, list) or not all(isinstance(t, str) and t.strip() for t in value):
+            raise serializers.ValidationError("Tagi muszą być niepustymi napisami.")
         return value
 
     def validate_ingredients(self, value):

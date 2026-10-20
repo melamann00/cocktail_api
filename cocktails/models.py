@@ -1,4 +1,3 @@
-from decimal import Decimal
 from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
@@ -7,6 +6,10 @@ from django.db import models
 class Ingredient(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
+    type = models.CharField(max_length=60, blank=True)  # np. Rum, Vodka
+    percentage = models.PositiveSmallIntegerField(
+        null=True, blank=True, validators=[MaxValueValidator(100)]
+    )
     is_alcoholic = models.BooleanField(default=False)
     image_url = models.URLField(max_length=500, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -21,7 +24,10 @@ class Ingredient(models.Model):
 class Cocktail(models.Model):
     name = models.CharField(max_length=150, unique=True)
     category = models.CharField(max_length=60, db_index=True)
+    glass = models.CharField(max_length=60, blank=True)
+    tags = models.JSONField(default=list, blank=True)
     instructions = models.TextField()
+    image_url = models.URLField(max_length=500, blank=True)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
@@ -42,19 +48,6 @@ class Cocktail(models.Model):
 
 
 class CocktailIngredient(models.Model):
-    """Tabela pośrednia: ilość danego składnika w koktajlu."""
-
-    class Unit(models.TextChoices):
-        ML = "ml", "ml"
-        CL = "cl", "cl"
-        G = "g", "g"
-        TSP = "tsp", "łyżeczka"
-        TBSP = "tbsp", "łyżka"
-        DASH = "dash", "dash"
-        PIECE = "piece", "sztuka"
-        SLICE = "slice", "plasterek"
-        LEAF = "leaf", "listek"
-
     cocktail = models.ForeignKey(
         Cocktail, on_delete=models.CASCADE, related_name="cocktail_ingredients"
     )
@@ -62,10 +55,7 @@ class CocktailIngredient(models.Model):
     ingredient = models.ForeignKey(
         Ingredient, on_delete=models.PROTECT, related_name="cocktail_ingredients"
     )
-    quantity = models.DecimalField(
-        max_digits=7, decimal_places=2, validators=[MinValueValidator(Decimal("0.01"))]
-    )
-    unit = models.CharField(max_length=10, choices=Unit.choices, default=Unit.ML)
+    measure = models.CharField(max_length=100, blank=True)
 
     class Meta:
         constraints = [
@@ -75,7 +65,7 @@ class CocktailIngredient(models.Model):
         ]
 
     def __str__(self):
-        return f"{self.quantity} {self.unit} {self.ingredient}"
+        return f"{self.measure} {self.ingredient}".strip()
 
 
 class Review(models.Model):

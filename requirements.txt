@@ -3,4 +3,3 @@ djangorestframework>=3.16
 django-filter>=25.1
 drf-spectacular>=0.28
 psycopg[binary]>=3.2
-
