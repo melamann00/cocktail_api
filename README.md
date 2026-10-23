@@ -6,8 +6,8 @@ A simple REST API for browsing and managing cocktail recipes, built with Django.
 
 | Method | Endpoint             | Description          |
 |--------|----------------------|----------------------|
-| GET    | `/cocktails/`        | List all cocktails   |
-| GET    | `/cocktails/<id>/`   | Get one cocktail     |
+| GET    | `api/cocktails/`        | List all cocktails   |
+| GET    | `api/cocktails/<id>/`   | Get one cocktail     |
 | POST   | `/cocktails/`        | Create a cocktail    |
 | PUT    | `/cocktails/<id>/`   | Update a cocktail    |
 | DELETE | `/cocktails/<id>/`   | Delete a cocktail    |
