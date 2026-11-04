@@ -127,11 +127,10 @@ class CocktailSerializer(serializers.ModelSerializer):
         for attr, val in validated_data.items():
             setattr(instance, attr, val)
         instance.save()
-        if items is not None:  # PUT lub PATCH z listą: zastępujemy cały przepis
+        if items is not None:
             instance.cocktail_ingredients.all().delete()
             self._save_ingredients(instance, items)
         return instance
-
 
 class ReviewSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(read_only=True)

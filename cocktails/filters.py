@@ -18,7 +18,6 @@ class CocktailFilter(df.FilterSet):
     author = df.CharFilter(field_name="author__username", lookup_expr="iexact")
     # ?alcoholic=false -> koktajle bez żadnego alkoholowego składnika
     alcoholic = df.BooleanFilter(method="filter_alcoholic")
-    # ?ingredient=mięta lub ?ingredient=3 (po nazwie lub id), można podać wiele razy -> wszystkie muszą wystąpić
     ingredient = df.CharFilter(method="filter_ingredient")
 
     class Meta:

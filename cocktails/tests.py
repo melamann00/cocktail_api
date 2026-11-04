@@ -198,7 +198,6 @@ class CocktailTests(BaseTest):
     def test_retrieve_404(self):
         self.assertEqual(self.client.get(reverse("cocktail-detail", args=[999])).status_code, 404)
 
-
 class ReviewTests(BaseTest):
     def setUp(self):
         super().setUp()

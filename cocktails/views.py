@@ -24,11 +24,8 @@ class RegisterView(generics.CreateAPIView):
 
 
 class LoginView(APIView):
-    """Logowanie sesyjne: po sukcesie przeglądarka/Swagger dostaje ciasteczko sesji."""
-
     authentication_classes = []
     permission_classes = [permissions.AllowAny]
-
     @extend_schema(request=LoginSerializer, responses={200: None})
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
@@ -42,17 +39,13 @@ class LoginView(APIView):
         login(request, user)
         return Response({"detail": "Zalogowano.", "username": user.username, "is_admin": user.is_staff})
 
-
 class LogoutView(APIView):
     @extend_schema(request=None, responses={200: None})
     def post(self, request):
         logout(request)
         return Response({"detail": "Wylogowano."})
 
-
 class IngredientViewSet(viewsets.ModelViewSet):
-    """Składniki: przeglądanie - każdy, dodawanie - zalogowani, edycja/usuwanie - administrator."""
-
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
     filterset_class = IngredientFilter
@@ -94,10 +87,7 @@ class CocktailViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
-
 class ReviewViewSet(viewsets.ModelViewSet):
-    """Recenzje zagnieżdżone w koktajlu: /api/cocktails/{id}/reviews/"""
-
     serializer_class = ReviewSerializer
     permission_classes = [IsOwnerOrAdminOrReadOnly]
     filter_backends = []

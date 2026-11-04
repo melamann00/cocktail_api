@@ -49,7 +49,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-# Baza: PostgreSQL gdy ustawiono POSTGRES_DB, w przeciwnym razie SQLite (wygodne lokalnie i w testach).
+# Baza: PostgreSQL gdy ustawiono POSTGRES_DB, w przeciwnym razie SQLite
 if os.environ.get("POSTGRES_DB"):
     DATABASES = {
         "default": {
